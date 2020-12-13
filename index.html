@@ -1,378 +1,127 @@
-<!DOCTYPE HTML>
-<!--
-	Indivisible by Pixelarity
-	pixelarity.com | hello@pixelarity.com
-	License: pixelarity.com/license
--->
-<html>
-	<head>
-		<title>通用設計介紹</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-    
-	<body class="is-preload-0 is-preload-1">
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - proj1-5_實際應用範例 bootstrap - 結合skrollr製作捲動式網頁</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Fredericka+the+Great&amp;family=Josefin+Slab&amp;family=Open+Sans&amp;family=Open+Sans+Condensed:wght@300&amp;family=Oswald&amp;family=Sacramento&amp;display=swap'><link rel="stylesheet" href="./style.css">
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav class="navbar navbar-default navbar-fixed-top navbar-top">
+  <div class="container">
+    <div class="navbar-header"><a class="navbar-brand"><i class="fas fa-home"></i></a></div>
+    <div class="navbar-collapse collapse">
+      <div class="nav navbar-nav navbar-right">
+        <li><a href="#section_ask"><font size="5">首頁</font></a></li>
+        <li><a href="#section_about"><font size="5">失綿博物館</font></a></li>
+        <li><a href="#section_future"><font size="5">失綿體驗館</font></a></li>
+      </div>
+    </div>
+  </div>
+</nav>
+<header class="jumbotron">
+  <div class="container">
+    <h1 data-0="transform: translateY(-50px)" data-500="transform: translateY(100px)"><font size="7">歡迎來到失綿博物館!</font></h1>
+    <hr data-0="transform: translateY(-50px)" data-500="transform: translateY(100px)"/>
+    <h4 data-0="transform: translateY(-50px)" data-500="transform: translateY(100px)">Welcome To Sheep&amp;Sleep Museum</h4>
+  </div>
+</header>
+<section id="section_ask">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-5 img" data-300="transform: translateX(-200px)" data-600="transform: translateY(0px)"></div>
+      <div class="col-sm-7" data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1">
+        <h1><font size="7">入睡困難</font></h1>
+        <p><font size="6">&emsp;&emsp;&emsp;症狀為躺在床上，輾轉反側，往往一兩個小時才能睡著。</font></p>
+      </div>
+    </div>
+  </div>
+</section> 
+<section id="section_about">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12" data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1">
+        <h1><font size="7" color="white">一般人失眠的原因</font></h1>
+        <hr/>
+      </div>
+      <div class="col-md-4 col-sm-6" data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1">
+        <div class="img_wrap"><img src="img/005%20(1).jpg" alt=""/></div>
+        <h1 data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1"><font color="white">心理上的原因</font></h1>
+          <p data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1"><font size="5" color="white">如果您患有憂鬱、焦慮，躁鬱症和創傷後壓力症候群</font></p>
+      </div>
+      <div class="col-md-4 col-sm-6" data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1">
+        <div class="img_wrap"><img src="img/06.jpg" alt=""/></div>
+        <h1 data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1"><font color="white">性別因素</font></h1>
+          <p data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1"><font size="5" color="white">女性可能更容易出現失眠症狀。月經週期、停經期間的荷爾蒙變化，都可能造成失眠。</font></p>
+      </div>
+      <div class="col-md-4 col-sm-6" data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1">
+        <div class="img_wrap"><img src="img/005%20(2).jpg" alt=""/></div>
+        <h1 data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1"><font color="white">年齡因素</font></h1>
+        <p data-bottom-top="transform: translateY(-50px);opacity: 0" data-center="transform: translateY(0px);opacity: 1"><font size="5"color="white" >失眠狀況會隨著年齡增長而增加。尤其是超過60歲</font></p>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="section_story">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-5 map" data-bottom-top="background-size: 150%; background-position: 0% 0%" data-center="background-size: 100%; background-position: 50% 50%">
+        <div class="cross"></div>
+      </div>
+      <div class="col-sm-7">
+        <div class="col-sm-12">
+            <h2><font size="7">何種因素會提高失眠風險？</font></h2>
+          <hr/>
+        </div>
+        <div class="col-sm-12">
+          <div class="col-sm-4" data-bottom-top="transform: scale(1.5);opacity: 0" data-center="transform: scale(1);opacity: 1"><i class="fa fa-venus-mars fa-5x"></i>
+            <h4>性別</h4>
+          </div>
+          <div class="col-sm-4" data-bottom-top="transform: scale(1.5);opacity: 0" data-center="transform: scale(1);opacity: 1"><i class="fa fa-briefcase fa-5x"></i>
+            <h4>工作</h4>
+          </div>
+          <div class="col-sm-4" data-bottom-top="transform: scale(1.5);opacity: 0" data-center="transform: scale(1);opacity: 1"><i class="fa fa-plane fa-5x"></i>
+            <h4>旅行</h4>
+          </div>
+        </div>
+        <div class="col-sm-12">
+            <div class="col-sm-4" ><p><font size="6">女性可能更容易出現失眠症狀。月經週期、停經期間的荷爾蒙變化，都可能造成失眠。</font></p></div>
+            <div class="col-sm-4"><p><font size="6">若工作要求您在夜間上班或輪班，都會增加失眠的風險。</font></p></div>
+            <div class="col-sm-4"><p><font size="6">如果需要長途旅行，您的風險就會更高。穿越多個時區的時差，會導致失眠.</font></p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="section_future">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+        <hr/>
+      </div>
+      <div class="col-sm-6"><img src="10.jpg" alt=""/></div>
+      <div class="col-sm-6" data-bottom-top="transform: translateX(50px)" data-center="transform: translateX(0px)">
+          <h1><font size='7'>緩解失眠的方式有哪些？</font></h1>
+        <p><br><br><font size='5'>1.降低室內溫度。暖和的身體和涼爽的房間是快速入睡的絕佳組合<br><br>2.杜絕所有光源。不僅是電子設備的光，任何光線都可能阻礙睡眠<br><br>3.避免睡前洗熱水澡<br><br>4.堅持寫日記，如果你老是情不自禁地想東想西，不如把你的思緒全部寫成日記<br><br>5.減少噪音。可以使用白噪音發生器或者播放來自大自然的聲音的錄音<br><br>6.白天適度運動鍛煉<br><br>7.避免睡前飲用濃茶，咖啡<br><br>8.限制午睡時間（老年人盡量不要午睡</font></p>
+      </div>
+    </div>
+  </div>
+</section>
+<footer class="jumbotron" id="section_less">
+  <div class="container">
+    <h2>已經到最下方囉!</h2>
+    <h2>還想再看更多?那麼就到失綿體驗館吧!</h2>
+    <hr/>
+    <button class="btn btn-default"><font size='6'>GO</font></button>
+  </div>
+</footer>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js'></script><script  src="./script.js"></script>
 
-				<!-- Home -->
-					<article id="home" class="panel special">
-						<div class="image" >
-							<img src="images/003.png" alt="" data-position="center center" />
-						</div>
-						<div class="content">
-							<div class="inner">
-								<header>
-									<h1>通用設計</h1>
-									<p>Universal Design</p>
-								</header>
-								<nav id="nav">
-									<ul class="actions stacked special animated spinY">
-										<li><a href="#work" class="button">介紹</a></li>
-										<li><a href="#about" class="button">範例</a></li>
-										<li><a href="#contact" class="button">實際案例</a></li>
-										<!--<li><a href="#elements" class="button">Elements</a></li>-->
-									</ul>
-								</nav>
-								
-							</div>
-						</div>
-					</article>
-
-				<!-- Work -->
-					<article id="work" class="panel secondary">
-						<div class="image">
-							<img src="images/009.png" alt="" data-position="center center" />
-						</div>
-						<div class="content">
-							<ul class="actions animated spinX">
-								<li><a href="#" class="button small back">Back</a></li>
-							</ul>
-							<div class="inner">
-								<header>
-									<h2>什麼是通用設計?</h2>
-									<p>What's Universal Design</p>
-								</header>
-								<p>通用設計又名全民設計、全方位設計或是通用化設計，是指無須改良或特別設計就能為所有人使用的產品、環境及通訊。除了考量身障者和其他弱勢使用族群，也顧及一般人的使用情況及需求，不僅考量使用者的使用情形，還顧慮到使用時的心理感受。</p>
-								
-							</div>
-						</div>
-					</article>
-
-				<!-- About -->
-					<article id="about" class="panel secondary">
-						<div class="image">
-							<img src="images/010.jpg" alt="" data-position="center center" />
-						</div>
-						<div class="content">
-							<ul class="actions animated spinX">
-								<li><a href="#" class="button small back">Back</a></li>
-							</ul>
-							<div class="inner">
-								<header>
-									<h2>醫院</h2>
-									<p>hospital</p>
-								</header>
-								<p>醫院每天進出人潮眾多，對於第一次進到醫院的人來說，還很陌生，對於院內的指標及平面圖若能夠更為熟悉，將有助於讓使用者了解醫院的各個環境及設施。</p>
-							</div>
-						</div>
-					</article>
-
-				<!-- Contact -->
-					<article id="contact" class="panel secondary">
-						<div class="image">
-                            <img src="images/011.jpg" alt="" data-position="bottom center" />
-						</div>
-						<div class="content">
-							<ul class="actions animated spinX">
-								<li><a href="#" class="button small back">Back</a></li>
-							</ul>
-							<div class="inner">
-								<header>
-									<h2>醫院樓層示意圖</h2>
-									<a href="index2.html"><p>導覽</p></a>
-								</header>
-								<p></p>
-							</div>
-						</div>
-					</article>
-
-				<!-- Elements -->
-					<article id="elements" class="panel secondary">
-						<div class="image">
-							<img src="images/011.jpg" alt="" data-position="center center" />
-						</div>
-						<div class="content">
-							<ul class="actions animated spinX">
-								<li><a href="#" class="button small back">Back</a></li>
-							</ul>
-							<div class="inner">
-								<header>
-									<h2>Elements</h2>
-								</header>
-
-								<section>
-									<h4>Text</h4>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h5>Blockquote</h5>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h5>Preformatted</h5>
-									<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
-
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
-
-								<section>
-									<h4>Lists</h4>
-
-									<h5>Unordered</h5>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h5>Alternate</h5>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
-
-									<h5>Ordered</h5>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h5>Icons</h5>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									</ul>
-
-									<h5>Actions</h5>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
-
-								<section>
-									<h4>Table</h4>
-									<h5>Default</h5>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-
-									<h5>Alternate</h5>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
-
-								<section>
-									<h4>Buttons</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
-
-								<section>
-									<h4>Form</h4>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-											</div>
-											<div class="field half">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-											</div>
-											<div class="field">
-												<label for="demo-category">Category</label>
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="field">
-												<label for="demo-message">Message</label>
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
-
-							</div>
-						</div>
-					</article>
-
-				<!-- Footer -->
-					
-
-			</div>
-
-        <!--Wrapper -->
-       
-				<!-- Footer -->
-					
-
-        
-        
-       
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+</body>
 </html>
